@@ -29,6 +29,9 @@
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "unordered_set": "cpp",
+        "ranges": "cpp",
+        "list": "cpp"
     }
 }
