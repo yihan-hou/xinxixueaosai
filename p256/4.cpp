@@ -10,12 +10,12 @@ bool labyrinth_yn(vector<vector<char>> buf, int ha, int la, int hb, int lb){
         return 0;
     }
     buf[ha][la] = '0';
-    bool u = labyrinth_yn(buf, ha-1, la, hb, lb);
-    bool d = labyrinth_yn(buf, ha+1, la, hb, lb);
-    bool l = labyrinth_yn(buf, ha, la-1, hb, lb);
-    bool r = labyrinth_yn(buf, ha, la+1, hb, lb);
+    auto res = labyrinth_yn(buf, ha-1, la, hb, lb)
+        || labyrinth_yn(buf, ha+1, la, hb, lb)
+        || labyrinth_yn(buf, ha, la-1, hb, lb)
+        || labyrinth_yn(buf, ha, la+1, hb, lb);
     buf[ha][la] = '.';
-    return u||d||l||r;
+    return res;
 }
 
 int main(){
